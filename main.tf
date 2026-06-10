@@ -67,7 +67,6 @@ locals {
 module "network" {
   source = "./modules/network"
 
-  project_id  = var.project_id
   name_prefix = var.name_prefix
   subnet_cidr = var.subnet_cidr
   region      = var.region
@@ -80,7 +79,6 @@ module "network" {
 module "firewall" {
   source = "./modules/firewall"
 
-  project_id        = var.project_id
   name_prefix       = var.name_prefix
   network           = module.network.network_id
   target_tags       = [local.network_tag]
@@ -95,7 +93,6 @@ module "firewall" {
 module "address" {
   source = "./modules/address"
 
-  project_id  = var.project_id
   name_prefix = var.name_prefix
   region      = var.region
 }
@@ -133,7 +130,6 @@ module "dns" {
 module "compute_instance" {
   source = "./modules/compute-instance"
 
-  project_id            = var.project_id
   name                  = "${var.name_prefix}-vm"
   machine_type          = var.machine_type
   zone                  = var.zone

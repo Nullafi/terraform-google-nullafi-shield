@@ -5,7 +5,6 @@
 # ------------------------------------------------------------------------------
 
 resource "google_compute_address" "main" {
-  project      = var.project_id
   name         = "${var.name_prefix}-ip"
   region       = var.region
   address_type = "EXTERNAL"

@@ -9,7 +9,6 @@
 # ------------------------------------------------------------------------------
 
 resource "google_compute_firewall" "web" {
-  project   = var.project_id
   name      = "${var.name_prefix}-allow-web"
   network   = var.network
   direction = "INGRESS"
@@ -26,7 +25,6 @@ resource "google_compute_firewall" "web" {
 resource "google_compute_firewall" "ssh" {
   count = length(var.allowed_ssh_cidrs) > 0 ? 1 : 0
 
-  project   = var.project_id
   name      = "${var.name_prefix}-allow-ssh"
   network   = var.network
   direction = "INGRESS"

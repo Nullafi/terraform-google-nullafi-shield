@@ -2,11 +2,6 @@
 # network module – variables
 # ------------------------------------------------------------------------------
 
-variable "project_id" {
-  description = "GCP project ID."
-  type        = string
-}
-
 variable "name_prefix" {
   description = "Prefix for resource names (VPC and subnet)."
   type        = string
