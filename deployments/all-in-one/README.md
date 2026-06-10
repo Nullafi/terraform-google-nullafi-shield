@@ -56,10 +56,10 @@ project_id = "mdc-defender3"
 region     = "us-east1"
 zone       = "us-east1-b"
 
-nullafi_license_key = "FT7YC..."   # provided by Nullafi
+nullafi_license_key = "key..."   # provided by Nullafi
 
-proxy_mitm_cert = "./nullafi_2026.crt"
-proxy_mitm_key  = "./nullafi_2026.key"
+proxy_mitm_cert = "./nullafi.crt"
+proxy_mitm_key  = "./nullafi.key"
 ```
 
 With this config, Shield will be reachable at `http://<external-ip>/login` after deployment.
