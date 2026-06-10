@@ -6,6 +6,7 @@
 # ------------------------------------------------------------------------------
 
 resource "google_compute_instance" "main" {
+  project      = var.project_id
   name         = var.name
   machine_type = var.machine_type
   zone         = var.zone

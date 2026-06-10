@@ -2,6 +2,11 @@
 # compute-instance module – variables
 # ------------------------------------------------------------------------------
 
+variable "project_id" {
+  description = "GCP project ID."
+  type        = string
+}
+
 variable "name" {
   description = "Name of the Compute Engine instance."
   type        = string
