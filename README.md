@@ -9,8 +9,6 @@ Deploys the full [Nullafi Shield](https://nullafi.com) stack on GCP — a single
 ```hcl
 provider "google" {
   project = "my-gcp-project"
-  region  = "us-east1"
-  zone    = "us-east1-b"
 }
 
 module "nullafi_shield" {
@@ -18,6 +16,8 @@ module "nullafi_shield" {
   version = "~> 1.0"
 
   project_id          = "my-gcp-project"
+  region  = "us-east1"
+  zone    = "us-east1-b"
   nullafi_license_key = "key provided by Nullafi"
   proxy_mitm_cert     = "./mitm.crt"   # your CA cert, or one provided by Nullafi
   proxy_mitm_key      = "./mitm.key"
