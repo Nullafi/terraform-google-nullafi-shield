@@ -14,7 +14,7 @@ provider "google" {
 }
 
 module "nullafi_shield" {
-  source  = "nullafi/shield/google"
+  source  = "nullafi/nullafi-shield/google"
   version = "~> 1.0"
 
   project_id          = "my-gcp-project"
@@ -44,7 +44,7 @@ Outputs:
 
 ## Requirements
 
-See [REQUIREMENTS.md](./REQUIREMENTS.md) for the full prerequisites: GCP APIs to enable, IAM roles needed, and assets provided by Nullafi (license key, MITM certificate).
+See [REQUIREMENTS.md](https://github.com/Nullafi/terraform-google-nullafi-shield/edit/main/REQUIREMENTS.md) for the full prerequisites: GCP APIs to enable, IAM roles needed, and assets provided by Nullafi (license key, MITM certificate).
 
 ## Resources created
 
