@@ -7,11 +7,11 @@ zone       = "us-east1-b"
 # credentials_file = "/path/to/sa-key.json"   # omit to use `gcloud auth application-default login`
 
 # ---- Shield license (provided by Nullafi) ----
-nullafi_license_key = "FT7YC..."
+nullafi_license_key = "key..."
 
 # ---- Squid MITM certs (provided by Nullafi) ----
-proxy_mitm_cert = "./nullafi_2026.crt"
-proxy_mitm_key  = "./nullafi_2026.key"
+proxy_mitm_cert = "./nullafi.crt"
+proxy_mitm_key  = "./nullafi.key"
 
 # ---- HTTPS (optional but recommended) ----
 # Set a hostname to enable Let's Encrypt. Without it, Shield is HTTP-only on the IP.
