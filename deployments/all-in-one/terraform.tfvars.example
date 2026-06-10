@@ -1,0 +1,35 @@
+# Copy to terraform.tfvars and fill in. terraform.tfvars is gitignored.
+
+# ---- GCP project / location ----
+project_id = "mdc-defender3"
+region     = "us-east1"
+zone       = "us-east1-b"
+# credentials_file = "/path/to/sa-key.json"   # omit to use `gcloud auth application-default login`
+
+# ---- Shield license (provided by Nullafi) ----
+nullafi_license_key = "FT7YC..."
+
+# ---- Squid MITM certs (provided by Nullafi) ----
+proxy_mitm_cert = "./nullafi_2026.crt"
+proxy_mitm_key  = "./nullafi_2026.key"
+
+# ---- HTTPS (optional but recommended) ----
+# Set a hostname to enable Let's Encrypt. Without it, Shield is HTTP-only on the IP.
+# host_name           = "shield.yourcompany.com"
+# acme_challenge_type = "TLS-ALPN-01"          # HTTP-01 | TLS-ALPN-01 | DNS-01
+
+# ---- DNS-01 via Cloud DNS (fully automated A record + ACME) ----
+# Set dns_managed_zone to your Cloud DNS zone's resource name. Terraform then
+# creates the A record and grants the VM dns.admin for DNS-01 challenges.
+# host_name           = "shield.yourcompany.com"
+# acme_challenge_type = "DNS-01"
+# acme_dns01_provider = "gcloud"
+# dns_managed_zone    = "yourcompany-com"
+
+# ---- Optional SSH ----
+# ssh_public_key    = "ssh-ed25519 AAAA..."
+# allowed_ssh_cidrs = ["203.0.113.42/32"]
+
+# ---- Optional sizing / labels ----
+# machine_type = "e2-standard-4"
+# labels       = { team = "security", env = "prod" }
