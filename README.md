@@ -18,13 +18,14 @@ module "nullafi_shield" {
   version = "~> 1.0"
 
   project_id          = "my-gcp-project"
-  nullafi_license_key = var.nullafi_license_key
+  nullafi_license_key = "key provided by Nullafi"
   proxy_mitm_cert     = "./mitm.crt"   # your CA cert, or one provided by Nullafi
   proxy_mitm_key      = "./mitm.key"
 
   # Optional: enable HTTPS via Let's Encrypt
   host_name           = "shield.yourcompany.com"
   acme_challenge_type = "TLS-ALPN-01"
+  name_prefix = "all-in-one" # optional
 }
 ```
 
